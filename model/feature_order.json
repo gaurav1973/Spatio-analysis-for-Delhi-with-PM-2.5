@@ -1,0 +1,7 @@
+[
+  "Month",
+  "DayOfWeek",
+  "PM2.5_Lag1",
+  "PM2.5_Lag7",
+  "PM2.5_Rolling7"
+]
