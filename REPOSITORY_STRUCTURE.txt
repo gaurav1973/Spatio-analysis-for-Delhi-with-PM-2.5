@@ -1,0 +1,37 @@
+Required GitHub repository root
+
+streamlit_app.py
+app_helpers.py
+requirements.txt
+README.md
+validate_deployment.py
+test_app_helpers.py
+
+.streamlit/
+  config.toml
+
+model/
+  xgboost_pm25_lite.json
+  feature_order.json
+
+data/
+  project_metadata.json
+  model_results.csv
+  default_prediction_history.csv
+  model_validation_sample.csv
+  station_means.csv
+  xgboost_shap_importance.csv
+  monthly_pm25.csv
+  seasonal_pm25.csv
+  yearly_pm25.csv
+
+assets/
+  yearly_pm25.png
+  monthly_pm25.png
+  seasonal_pm25.png
+  daily_pm25.png
+  station_pm25_top10.png
+  pollutant_correlation.png
+  model_error_comparison.png
+  xgboost_observed_vs_predicted.png
+  xgboost_shap_summary.png

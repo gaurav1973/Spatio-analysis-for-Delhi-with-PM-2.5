@@ -18,6 +18,25 @@ This version:
 
 The compact predictor was checked against all 399 saved XGBoost test predictions. The maximum absolute difference was below `0.001 µg/m³`.
 
+
+## Important: upload the folder structure
+
+The GitHub repository root must contain the `model`, `data`, `assets` and `.streamlit` folders. Do not upload only `streamlit_app.py`.
+
+Correct repository root:
+
+```text
+streamlit_app.py
+app_helpers.py
+requirements.txt
+model/
+data/
+assets/
+.streamlit/
+```
+
+This ZIP is GitHub-ready: its files and folders are stored directly at the archive root. Extract it, then upload every extracted item to the repository root.
+
 ## Deploy
 
 1. Upload the contents of this folder to the root of a GitHub repository.

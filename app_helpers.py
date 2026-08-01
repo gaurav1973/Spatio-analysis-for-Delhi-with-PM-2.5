@@ -120,4 +120,18 @@ def required_files(base_directory: str | Path) -> list[Path]:
 def validate_project_files(base_directory: str | Path) -> None:
     missing = [str(path) for path in required_files(base_directory) if not path.exists()]
     if missing:
-        raise FileNotFoundError("Missing deployment files: " + ", ".join(missing))
+        expected_structure = (
+            "\n\nExpected GitHub repository structure:\n"
+            "streamlit_app.py\n"
+            "app_helpers.py\n"
+            "requirements.txt\n"
+            "model/xgboost_pm25_lite.json\n"
+            "data/project_metadata.json\n"
+            "data/model_results.csv\n"
+            "data/default_prediction_history.csv\n"
+            "assets/xgboost_shap_summary.png\n"
+            "\nUpload the model, data and assets folders as well as the Python files."
+        )
+        raise FileNotFoundError(
+            "Missing deployment files: " + ", ".join(missing) + expected_structure
+        )
