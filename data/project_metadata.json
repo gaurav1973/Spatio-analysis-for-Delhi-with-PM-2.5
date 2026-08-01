@@ -1,0 +1,37 @@
+{
+  "project_title": "Spatio-Temporal Analysis and Prediction of Air Quality in Delhi",
+  "target": "Next-day Delhi-wide average PM2.5",
+  "calendar_start": "2015-01-01",
+  "calendar_end": "2020-07-01",
+  "calendar_days": 2009,
+  "missing_daily_pm25_days": 2,
+  "modelling_rows": 1993,
+  "training_rows": 1594,
+  "testing_rows": 399,
+  "training_start": "2015-01-08",
+  "training_end": "2019-05-29",
+  "testing_start": "2019-05-30",
+  "testing_end": "2020-07-01",
+  "default_prediction_date": "2020-07-02",
+  "features": [
+    "Month",
+    "DayOfWeek",
+    "PM2.5_Lag1",
+    "PM2.5_Lag7",
+    "PM2.5_Rolling7"
+  ],
+  "deployment_model": "Compact pure-Python XGBoost tree ensemble",
+  "lite_model_maximum_prediction_difference": 0.00013564197712412351,
+  "model_parameters": {
+    "n_estimators": 100,
+    "max_depth": 3,
+    "learning_rate": 0.1,
+    "objective": "reg:squarederror",
+    "random_state": 42
+  },
+  "limitations": [
+    "Academic prototype trained on historical Delhi data from 2015 to 2020.",
+    "The prediction model does not use live monitoring or meteorological data.",
+    "SHAP explains model behaviour and does not establish causation."
+  ]
+}
